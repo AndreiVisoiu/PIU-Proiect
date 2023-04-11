@@ -1,0 +1,14 @@
+<div class="gradient">
+    <div class="items">
+        <div *ngFor="let item of itemList" class="item">
+            <p>Nume: {{item.name}}</p>
+            <p>Descriere: {{item.category}}</p>
+            <p>Cantitate: {{item.number}}</p>
+            <button class="fancy">Delete</button>
+            <button class="fancy">Edit</button>
+        </div>
+        <div class="item" id="newItem">
+            <button class="fancy" id="addNew" (click)="openDialog()">Add New Item</button>
+        </div>
+    </div>
+</div>

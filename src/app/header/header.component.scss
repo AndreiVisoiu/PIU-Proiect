@@ -1,0 +1,59 @@
+.navbar {
+    position: sticky;
+    display: inline-flex;
+    padding-top: 0.6vw;
+    padding-bottom: 0.6vw;
+    width: 100%;
+    background-color: black;
+  }
+
+.menu{
+    width: 100%;
+}
+
+#home{
+    position: relative;
+    left: 2vw;
+    margin-right: 64%;
+}
+
+a{
+    color:white;
+    margin-right: 5%;
+    justify-content: space-between;
+    font-size: 1.4vw;
+}
+
+a:link{
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.8s;
+}
+
+a:hover {
+    color: blue;
+    background-color: transparent;
+    
+}
+  
+a:active {
+    color: red;
+    background-color: transparent;
+}
+
+#signUp{
+    left: 50vw;
+    justify-content: center;
+    //margin-top: 0.7%;
+    padding: 0.5% 2%;
+    font-size: 1.4vw;
+    background: linear-gradient(90deg, rgb(252, 252, 83), transparent) rgb(252, 252, 83);
+    transition: background-color 0.5s;
+}
+
+#signUp:hover{
+    background: linear-gradient(90deg, rgb(252, 252, 83) , transparent) #9c27b0;
+    transition: background-color 0.5s;
+    }
