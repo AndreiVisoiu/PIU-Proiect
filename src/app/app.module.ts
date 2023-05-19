@@ -6,12 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { InventoryComponent } from './pages/inventory/inventory.component';
-//import { DialogComponent } from './pages/dialog/dialog.component';
 import { FormComponent } from './pages/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http'
     FormComponent
   ],
   imports: [
+    MatInputModule,
     HttpClientModule,
     MatDialogModule,
     FormsModule,

@@ -1,19 +1,21 @@
 <div class="form" [formGroup]="form">
-    <mat-form-field appearance="fill">
-        <mat-label>Fill from field</mat-label>
+    <!-- <mat-form-field appearance="fill"> -->
+        <!-- <mat-label>Nume</mat-label> -->
         <input matInput type="text" formControlName="name" placeholder="nume">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    </mat-form-field>
+    <!-- </mat-form-field> -->
 
-    <mat-form-field appearance="fill">
-        <mat-label>Fill from field</mat-label>
-        <input matInput type="text" formControlName="descriere" placeholder="descriere">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    </mat-form-field>
+    <!-- <mat-form-field appearance="fill"> -->
+        <!-- <mat-label>Descriere</mat-label> -->
+        <input matInput type="text" formControlName="category" placeholder="descriere">
+    <!-- </mat-form-field> -->
 
-    <mat-form-field appearance="fill">
-        <mat-label>Fill from field</mat-label>
-        <input matInput type="text" formControlName="cantitate" placeholder="cantitate">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    </mat-form-field>
+    <!-- <mat-form-field appearance="fill"> -->
+        <!-- <mat-label>Cantitate</mat-label>    -->
+        <input matInput type="text" formControlName="number" placeholder="cantitate">
+    <!-- </mat-form-field> -->
+    <!-- <button mat-raised-button color="accent" *nfIf=data.idToBeEdit !="0">save</button> -->
+    <div>
+        <button class="cardButton" (click)="saveNewItem()">Save</button>
+        <button class="cardButton" (click)="this.dialogRef.close()">Cancel</button>
+    </div>
 </div>

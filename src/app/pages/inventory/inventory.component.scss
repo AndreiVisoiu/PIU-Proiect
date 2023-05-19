@@ -1,107 +1,130 @@
-////////////////////////////////////////////////////////////
-///                 BACKGROUND ANIMATION                 ///
-//////////////////////////////////////////////////////////// 
+///////////////////////////////////////////////////////////////
+///                          CARD                           ///
+///////////////////////////////////////////////////////////////
 
-.gradient {
-    width: 100%;
-    height: auto;
-    background: linear-gradient(-45deg, #ffeb3b, #74efff, #9c27b0);
-    background-size: 100% 100%;
-    animation: gradient-bg 20s ease infinite;
+.items {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-@keyframes gradient-bg {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+@media only screen and (max-width: 1500px) {
+  .items {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-////////////////////////////////////////////////////////////
-///                     END OF                           ///
-///              BACKGROUND ANIMATION                    ///
-//////////////////////////////////////////////////////////// 
-
-.items{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+@media only screen and (max-width: 1200px) {
+  .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.item{
-    align-items: center;
-    padding: 0;
-    margin: 1vw;
-    background: #ffeb3b31;
-    border-radius: 25px;
-    height: 18rem;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
-    transition: all .3s ease-in-out;
+@media only screen and (max-width: 875px) {
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .items {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 7rem;
+  }
+}
+
+.item {
+  display: block;
+  padding: 0;
+  margin: 1rem;
+  background: #ffeb3b31;
+  border-radius: 25px;
+  height: 300px;
+  width: 260px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+  transition: all 0.3s ease-in-out;
 }
 .item:hover {
   box-shadow: rgba(0, 0, 0, 0.22) 0px 20px 20px;
   transform: translate3d(0px, -1px, 0px);
 }
 
-p{
-   text-align: center;
-    position: relative;
-    font-size: 1.4vw;
-    top: 1vw;
+p {
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  top: 1rem;
 }
 
-.fancy {
-  appearance: button;
-  backface-visibility: hidden;
-  background-color: #405cf5;
-  border-radius: 6px;
-  border-width: 0;
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  font-size: 100%;
-  height: 44px;
-  line-height: 1.15;
-  margin: 12px 0 0;
-  outline: none;
-  overflow: hidden;
-  display: block;
-  margin-top: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
+#newItemCard {
   position: relative;
   text-align: center;
-  text-transform: none;
-  transform: translateZ(0);
-  transition: all .2s,box-shadow .08s ease-in;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 60%;
 }
 
-.fancy:disabled {
-  cursor: default;
+///////////////////////////////////////////////////////////////
+///                         BUTTON                          ///
+///////////////////////////////////////////////////////////////
+
+.cardButton {
+  border: 1px solid #2980b9;
+  background: none;
+  padding: 0.5rem 1rem;
+  margin-top: 45%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.8s;
+  color: #2980b9;
+  position: relative;
+  overflow: hidden;
 }
 
-.fancy:focus {
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+.cardButton:hover {
+  color: #fff;
 }
 
-#addNew{
-    top: 30%;
-    margin-left: auto;
+.cardButton::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #2980b9;
+  z-index: -1;
+  transition: 0.8s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
 }
 
-a{
-  color: white;
-  text-decoration: none;
+.cardButton:hover::before {
+  height: 180%;
+}
+
+.buttons{
+  text-align: center;
+}
+
+#newItemButton{
+  top:32%;
+}
+
+///////////////////////////////////////////////////////////////
+///                       SCROLLBAR                         ///
+///////////////////////////////////////////////////////////////
+
+::-webkit-scrollbar{
+  width: 0.75rem;
+}
+::-webkit-scrollbar-track{
+  background: #24252a;
+}
+::-webkit-scrollbar-thumb{
+  background: grey;
+  border:0.25em solid #24252a;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: rgb(150, 150, 150);
 }

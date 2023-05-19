@@ -7,12 +7,7 @@ import { Item } from 'src/models/item';
   providedIn: 'root'
 })
 export class ItemService {
-
-  readonly baseUrl = "https://localhost:44385/api/item";
-  //readonly getItemById = "https://localhost:44385/api/item/getItems/";
-  //readonly post = "https://localhost:44385/api/item/post";
-  //readonly delete = "https://localhost:44385/api/item/delete/{id}";
-  //readonly edit = "https://localhost:44385/api/item/edit/{id}";
+  readonly baseUrl = "https://localhost:44385/api/item/";
 
   constructor(public httpClient: HttpClient) { }
 
@@ -25,7 +20,7 @@ export class ItemService {
   }
 
   createItem(item: Item): Observable<Item> {
-    return this.httpClient.post(this.baseUrl + "post/", item) as Observable<Item>;
+    return this.httpClient.post(this.baseUrl + "post", item) as Observable<Item>;
   }
 
   deleteItem(id: number): Observable<null>{
